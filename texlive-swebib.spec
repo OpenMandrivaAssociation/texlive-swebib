@@ -49,6 +49,7 @@ implement Swedish collation.
 %{_texmfdistdir}/bibtex/bst/swebib/sweplnat.bst
 %{_texmfdistdir}/bibtex/bst/swebib/sweunsrt.bst
 %doc %{_texmfdistdir}/doc/latex/swebib/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +60,5 @@ implement Swedish collation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
