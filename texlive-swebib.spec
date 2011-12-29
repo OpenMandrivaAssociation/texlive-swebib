@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The bundle contains Swedish versions of the standard
@@ -26,20 +25,12 @@ should be funtionally equivalent to the corresponding original
 styles, apart from the Swedish translations. The styles do not
 implement Swedish collation.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -50,7 +41,6 @@ implement Swedish collation.
 %{_texmfdistdir}/bibtex/bst/swebib/sweplnat.bst
 %{_texmfdistdir}/bibtex/bst/swebib/sweunsrt.bst
 %doc %{_texmfdistdir}/doc/latex/swebib/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,5 +51,3 @@ implement Swedish collation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
