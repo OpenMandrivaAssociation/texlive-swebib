@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-swebib
 Version:	20070115
-Release:	5
+Release:	6
 Summary:	Swedish bibliography styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/swebib
