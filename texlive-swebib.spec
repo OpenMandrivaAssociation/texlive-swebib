@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /biblio/bibtex/contrib/swebib
-# catalog-date 2007-01-15 14:17:51 +0100
-# catalog-license lppl1.2
-# catalog-version undef
 Name:		texlive-swebib
 Version:	20170414
 Release:	1
@@ -35,12 +29,8 @@ implement Swedish collation.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/bibtex/bst/swebib/sweabbrv.bst
-%{_texmfdistdir}/bibtex/bst/swebib/swealpha.bst
-%{_texmfdistdir}/bibtex/bst/swebib/sweplain.bst
-%{_texmfdistdir}/bibtex/bst/swebib/sweplnat.bst
-%{_texmfdistdir}/bibtex/bst/swebib/sweunsrt.bst
-%doc %{_texmfdistdir}/doc/latex/swebib/README
+%{_texmfdistdir}/bibtex/bst/swebib
+%doc %{_texmfdistdir}/doc/latex/swebib
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,17 +41,3 @@ implement Swedish collation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070115-2
-+ Revision: 756363
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070115-1
-+ Revision: 719621
-- texlive-swebib
-- texlive-swebib
-- texlive-swebib
-- texlive-swebib
-
