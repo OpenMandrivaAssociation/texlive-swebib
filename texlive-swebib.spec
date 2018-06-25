@@ -1,5 +1,5 @@
 Name:		texlive-swebib
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Swedish bibliography styles
 Group:		Publishing
