@@ -1,12 +1,12 @@
 Name:		texlive-swebib
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Swedish bibliography styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/swebib
 License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -20,12 +20,12 @@ styles, apart from the Swedish translations. The styles do not
 implement Swedish collation.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -34,7 +34,7 @@ implement Swedish collation.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
