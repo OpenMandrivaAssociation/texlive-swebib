@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Swedish bibliography styles
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/swebib
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/swebib
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/swebib.doc.r%{version}.tar.xz
