@@ -1,6 +1,6 @@
 Name:		texlive-swebib
-Version:	15878
-Release:	2
+Version:	76924
+Release:	1
 Summary:	Swedish bibliography styles
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/swebib
